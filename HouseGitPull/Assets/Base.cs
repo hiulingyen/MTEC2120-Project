@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Base : MonoBehaviour
+public class Base : NetworkBehaviour
 {
     public GameObject Cubee;
     void Start()
@@ -28,6 +28,14 @@ public class Base : MonoBehaviour
             }
 
         }
+        for (int y = 1; y < 7; y++)
+        {
+            for (int r = 5; r < 7; r++)
+                Instantiate(Cubee, new Vector3(y, r, 0), Quaternion.identity);
+
+        }
+
+    }
     }
 
 
